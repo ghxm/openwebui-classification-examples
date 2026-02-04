@@ -47,6 +47,7 @@ OPENWEBUI_MODEL=llama4:latest
 
 | File | Package | Techniques |
 |------|---------|------------|
+| `examples/requests_classification.py` | requests | Zero-shot, Few-shot |
 | `examples/openai_classification.py` | openai | Zero-shot, Few-shot |
 | `examples/langchain_classification.py` | langchain | Zero-shot, Few-shot |
 | `examples/litellm_classification.py` | litellm | Zero-shot, Few-shot |
@@ -55,6 +56,7 @@ OPENWEBUI_MODEL=llama4:latest
 ## Run
 
 ```bash
+python examples/requests_classification.py
 python examples/openai_classification.py
 python examples/langchain_classification.py
 python examples/litellm_classification.py
