@@ -5,9 +5,13 @@ import litellm
 
 load_dotenv()
 
-BASE_URL = f"{os.getenv('OPENWEBUI_BASE_URL')}/api"
-API_KEY = os.getenv("OPENWEBUI_API_KEY")
-MODEL = f"openai/{os.getenv('OPENWEBUI_MODEL')}"  # LiteLLM prefix for OpenAI-compatible APIs
+# Configuration: loaded from .env file, or set directly here
+_BASE_URL = os.getenv("OPENWEBUI_BASE_URL")  # e.g., "http://localhost:3000"
+API_KEY = os.getenv("OPENWEBUI_API_KEY")  # e.g., "sk-..."
+_MODEL = os.getenv("OPENWEBUI_MODEL")  # e.g., "llama4:latest"
+
+BASE_URL = f"{_BASE_URL}/api"
+MODEL = f"openai/{_MODEL}"  # LiteLLM requires "openai/" prefix for OpenAI-compatible APIs
 
 CATEGORIES = ["positive", "negative", "neutral"]
 

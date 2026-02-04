@@ -5,8 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BASE_URL = os.getenv("OPENWEBUI_BASE_URL")
-API_KEY = os.getenv("OPENWEBUI_API_KEY")
+# Configuration: loaded from .env file, or set directly here
+BASE_URL = os.getenv("OPENWEBUI_BASE_URL")  # e.g., "http://localhost:3000"
+API_KEY = os.getenv("OPENWEBUI_API_KEY")  # e.g., "sk-..."
 
 
 def list_models():

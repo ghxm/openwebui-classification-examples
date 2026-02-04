@@ -6,10 +6,15 @@ from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptT
 
 load_dotenv()
 
+# Configuration: loaded from .env file, or set directly here
+BASE_URL = os.getenv("OPENWEBUI_BASE_URL")  # e.g., "http://localhost:3000"
+API_KEY = os.getenv("OPENWEBUI_API_KEY")  # e.g., "sk-..."
+MODEL = os.getenv("OPENWEBUI_MODEL")  # e.g., "llama4:latest"
+
 llm = ChatOpenAI(
-    base_url=f"{os.getenv('OPENWEBUI_BASE_URL')}/api",
-    api_key=os.getenv("OPENWEBUI_API_KEY"),
-    model=os.getenv("OPENWEBUI_MODEL"),
+    base_url=f"{BASE_URL}/api",
+    api_key=API_KEY,
+    model=MODEL,
     temperature=0,
 )
 

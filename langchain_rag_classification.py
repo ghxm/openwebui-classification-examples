@@ -11,9 +11,12 @@ from langchain_chroma import Chroma
 
 load_dotenv()
 
-BASE_URL = f"{os.getenv('OPENWEBUI_BASE_URL')}/api"
-API_KEY = os.getenv("OPENWEBUI_API_KEY")
-MODEL = os.getenv("OPENWEBUI_MODEL")
+# Configuration: loaded from .env file, or set directly here
+_BASE_URL = os.getenv("OPENWEBUI_BASE_URL")  # e.g., "http://localhost:3000"
+API_KEY = os.getenv("OPENWEBUI_API_KEY")  # e.g., "sk-..."
+MODEL = os.getenv("OPENWEBUI_MODEL")  # e.g., "llama4:latest"
+
+BASE_URL = f"{_BASE_URL}/api"
 
 llm = ChatOpenAI(base_url=BASE_URL, api_key=API_KEY, model=MODEL, temperature=0)
 
