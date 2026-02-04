@@ -47,18 +47,18 @@ OPENWEBUI_MODEL=llama4:latest
 
 | File | Package | Techniques |
 |------|---------|------------|
-| `openai_classification.py` | openai | Zero-shot, Few-shot |
-| `langchain_classification.py` | langchain | Zero-shot, Few-shot |
-| `litellm_classification.py` | litellm | Zero-shot, Few-shot |
-| `langchain_rag_classification.py` | langchain + chromadb | RAG (local embeddings) |
+| `examples/openai_classification.py` | openai | Zero-shot, Few-shot |
+| `examples/langchain_classification.py` | langchain | Zero-shot, Few-shot |
+| `examples/litellm_classification.py` | litellm | Zero-shot, Few-shot |
+| `examples/langchain_rag_classification.py` | langchain + chromadb | RAG (local embeddings) |
 
 ## Run
 
 ```bash
-python openai_classification.py
-python langchain_classification.py
-python litellm_classification.py
-python langchain_rag_classification.py
+python examples/openai_classification.py
+python examples/langchain_classification.py
+python examples/litellm_classification.py
+python examples/langchain_rag_classification.py
 ```
 
 ## API Endpoints
